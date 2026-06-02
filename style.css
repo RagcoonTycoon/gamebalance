@@ -555,9 +555,10 @@ main {
 }
 
 .qr-card {
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   padding: 30px;
+  margin: 0 20px;
   text-align: center;
 }
 
