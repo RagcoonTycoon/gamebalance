@@ -7,11 +7,9 @@ function calculateResult() {
   const q6 = document.querySelector('input[name="q6"]:checked');
   const q7 = document.querySelector('input[name="q7"]:checked');
   const q8 = document.querySelector('input[name="q8"]:checked');
-  const q9 = document.querySelector('input[name="q9"]:checked');
-  const q10 = document.querySelector('input[name="q10"]:checked');
   const resultBox = document.getElementById("result");
 
-  if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10) {
+  if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8) {
     resultBox.textContent =
       "Harap jawab semua pertanyaan sebelum melihat hasil.";
     resultBox.className = "result-empty";
@@ -26,15 +24,13 @@ function calculateResult() {
     Number(q5.value) +
     Number(q6.value) +
     Number(q7.value) +
-    Number(q8.value) +
-    Number(q9.value) +
-    Number(q10.value);
+    Number(q8.value);
 
-  if (score <= 6) {
+  if (score <= 12) {
     resultBox.textContent =
       "Tingkat kecanduan rendah. Kebiasaan bermainmu masih cukup sehat, tetapi tetap perhatikan waktu dan pola bermain.";
     resultBox.className = "result-low";
-  } else if (score <= 12) {
+  } else if (score <= 24) {
     resultBox.textContent =
       "Tingkat kecanduan sedang. Coba mulai mengatur waktu bermain dan menambahkan aktivitas non-game dalam rutinitas harianmu.";
     resultBox.className = "result-medium";
