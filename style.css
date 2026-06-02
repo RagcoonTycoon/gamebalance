@@ -614,23 +614,83 @@ footer a {
 }
 
 @media (max-width: 900px) {
-  .hero,
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 6vw 30px;
+    min-height: auto;
+    background-position: top center;
+  }
+
+  .hero-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.4rem, 5vw, 3rem);
+    max-width: 100%;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    font-size: 15px;
+  }
+
+  .hero-actions,
+  .hero-stats {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-illustration {
+    width: 100%;
+    min-height: 320px;
+    margin-top: 24px;
+  }
+
+  .hero-illustration .device-frame {
+    width: min(96%, 340px);
+  }
+
+  .hero-card {
+    position: static;
+    width: 100%;
+    margin-top: 14px;
+  }
+
+  .hero-card:first-of-type,
+  .hero-card.muted {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+
   .selfcheck {
     grid-template-columns: 1fr;
   }
 
-  .hero-illustration {
-    min-height: 360px;
+  .left,
+  .right {
+    width: 100%;
   }
 
-  .hero-card:first-of-type {
-    top: 12px;
-    left: 0;
+  .question-box {
+    padding: 24px;
   }
 
-  .hero-card.muted {
-    right: 0;
-    bottom: 10px;
+  .info-list {
+    margin-left: 0;
+  }
+
+  .education,
+  .selfcheck,
+  .tips,
+  .blog,
+  .qr-section {
+    padding: 40px 5vw;
   }
 }
 
@@ -638,31 +698,83 @@ footer a {
   header {
     flex-direction: column;
     gap: 10px;
+    padding: 16px 4vw;
   }
 
   nav {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 14px;
+    gap: 12px;
   }
 
   .hero {
-    padding-top: 110px;
+    padding-top: 90px;
+    background-size: cover;
   }
 
-  .hero-actions,
-  .hero-stats {
-    flex-direction: column;
-    align-items: stretch;
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-copy {
+    margin-bottom: 24px;
+  }
+
+  .hero-actions button,
+  .secondary-btn {
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-card {
-    position: static;
-    width: 100%;
-    margin-top: 12px;
+    padding: 14px;
   }
 
   .device-frame {
     width: 100%;
+    max-width: 320px;
+  }
+
+  .section-heading h2,
+  .left h2,
+  .qr-card h2 {
+    font-size: 26px;
+  }
+
+  .tips-container,
+  .blog-container {
+    gap: 16px;
+  }
+
+  .blog-card img {
+    height: 200px;
+  }
+
+  .blog-content {
+    min-height: auto;
+  }
+
+  .qr-section {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .qr-card {
+    margin: 0;
+    padding: 24px;
+  }
+
+  .option {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .option label {
+    flex: 1;
+    min-width: 0;
+  }
+
+  footer {
+    padding: 18px 4vw;
   }
 }

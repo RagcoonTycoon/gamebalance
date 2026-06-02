@@ -3,9 +3,15 @@ function calculateResult() {
   const q2 = document.querySelector('input[name="q2"]:checked');
   const q3 = document.querySelector('input[name="q3"]:checked');
   const q4 = document.querySelector('input[name="q4"]:checked');
+  const q5 = document.querySelector('input[name="q5"]:checked');
+  const q6 = document.querySelector('input[name="q6"]:checked');
+  const q7 = document.querySelector('input[name="q7"]:checked');
+  const q8 = document.querySelector('input[name="q8"]:checked');
+  const q9 = document.querySelector('input[name="q9"]:checked');
+  const q10 = document.querySelector('input[name="q10"]:checked');
   const resultBox = document.getElementById("result");
 
-  if (!q1 || !q2 || !q3 || !q4) {
+  if (!q1 || !q2 || !q3 || !q4 || !q5 || !q6 || !q7 || !q8 || !q9 || !q10) {
     resultBox.textContent =
       "Harap jawab semua pertanyaan sebelum melihat hasil.";
     resultBox.className = "result-empty";
@@ -13,7 +19,16 @@ function calculateResult() {
   }
 
   const score =
-    Number(q1.value) + Number(q2.value) + Number(q3.value) + Number(q4.value);
+    Number(q1.value) +
+    Number(q2.value) +
+    Number(q3.value) +
+    Number(q4.value) +
+    Number(q5.value) +
+    Number(q6.value) +
+    Number(q7.value) +
+    Number(q8.value) +
+    Number(q9.value) +
+    Number(q10.value);
 
   if (score <= 6) {
     resultBox.textContent =
