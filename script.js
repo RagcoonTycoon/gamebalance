@@ -1,3 +1,23 @@
+// Simple Visit Counter using localStorage
+document.addEventListener("DOMContentLoaded", function () {
+  incrementVisitCounter();
+  displayVisitCounter();
+});
+
+function incrementVisitCounter() {
+  let visits = localStorage.getItem("visitCounter");
+  visits = visits ? parseInt(visits) + 1 : 1;
+  localStorage.setItem("visitCounter", visits);
+}
+
+function displayVisitCounter() {
+  const visits = localStorage.getItem("visitCounter") || 0;
+  const counterElement = document.getElementById("visit-counter");
+  if (counterElement) {
+    counterElement.textContent = "Pengunjung: " + visits;
+  }
+}
+
 function calculateResult() {
   const q1 = document.querySelector('input[name="q1"]:checked');
   const q2 = document.querySelector('input[name="q2"]:checked');
